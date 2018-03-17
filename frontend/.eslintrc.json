@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "chai-friendly",
+    "mocha"
+  ],
+  "globals": {
+    "process": true
+  },
+  "rules": {
+    "react/jsx-boolean-value": 0,
+    "no-undefined": 0,
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2,
+    "mocha/no-exclusive-tests": "error"
+  }
+}
