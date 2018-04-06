@@ -2,9 +2,15 @@
 
 const React = require("react");
 
+/*
+    MOCK CSS MODULES
+*/
 var mockCssModules = require("mock-css-modules");
 mockCssModules.register([".css", ".scss"]);
 
+/*
+    ENZYME
+*/
 const Enzyme = require("enzyme");
 const Adapter = require("enzyme-adapter-react-16");
 Enzyme.configure({ adapter: new Adapter() });
@@ -16,14 +22,28 @@ const { document } = new JSDOM(
 ).window;
 const window = document.defaultView;
 
-const chai = require("chai");
+/*
+    SINON
+*/
+const sinon = require("sinon");
 
+/*
+    CHAI
+*/
+const chai = require("chai");
 const { expect } = chai;
 
-const toJson = require("enzyme-to-json").default;
-const snapshot = require("snap-shot-it");
+const sinonChai = require("sinon-chai");
+chai.use(sinonChai);
 
-const sinon = require("sinon");
+const chaiDiff = require('chai-diff');
+chai.use(chaiDiff);
+
+const chaiEnzyme = require('chai-enzyme');
+chai.use(chaiEnzyme);
+
+// const snapshot = require("snap-shot-it");
+
 
 Object.assign(global, {
   React,

@@ -9,9 +9,7 @@ const content = (name) => `\
 import React from "react";
 import PropTypes from "prop-types";
 
-import {
-
-} from "../elements";
+import { } from "../elements";
 
 import style from "./${name}.scss";
 

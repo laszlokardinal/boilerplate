@@ -9,17 +9,11 @@ const content = (name) => `\
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import {
+import { } from "../elements";
 
-} from "../elements";
+import { } from "../screens";
 
-import {
-
-} from "../screens";
-
-import {
-
-} from "../layout";
+import { } from "../layout";
 
 class ${name} extends Component {
   static propTypes = {
