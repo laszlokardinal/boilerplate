@@ -4,9 +4,7 @@ describe("reducers", () => {
   describe("PostsReducer", () => {
     describe("on initial call", () => {
       it("returns the initial state", () => {
-        expect(authReducer(undefined, { type: "" })).to.deep.equal({
-
-        });
+        expect(authReducer(undefined, { type: "" })).to.deep.equal({});
       });
     });
 
